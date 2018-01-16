@@ -1,0 +1,191 @@
+ <!DOCTYPE html>
+ <style type="text/css">
+.container{
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+}
+.box2 , .box3 {
+    width:550px;
+    height:700px;
+    float:left;
+    margin-bottom:10px;
+    padding:10px;
+    border:1px solid #888;
+}
+.box1 {
+    width:400px;
+    height:700px;
+    float:left;
+    margin-bottom:10px;
+    padding:10px;
+    border:1px solid #888;
+}
+.box1 {
+    clear:left;
+    margin-right:10px;
+}
+.clear {
+    clear:both;
+}
+#map, #pano {
+        float: left;
+        height: 100%;
+        width: 100%;
+		}
+		
+ 
+nav ul li a{
+  color: black;
+}    
+
+</style>
+	
+  <html>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	  <script type=”javascript”>
+	Materialize.toast('使用方法', 4000);
+    </script>
+    </head>
+
+    <body background="https://www.123freevectors.com/wp-content/original/2087-blue-watercolor-background.jpg" style="background-repeat:no-repeat; background-size:100% 100%;" >
+      <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+	  
+	  <!-- navbar開始 --> 
+<ul id="dropdown1" class="dropdown-content">
+
+  <li><a href="new google map.html">追星地圖</a></li>
+	  <li class="divider"></li>
+	  <li><a href="youtube player.html">影片播放清單</a></li>
+	  <li class="divider"></li>
+	  <li><a href="fb graph api.html">最新資訊</a></li>
+</ul>
+<nav class=" transparent z-depth-0 " >
+  <div class="nav-wrapper ">
+    <strong><a href="testing.html" class="brand-logo" style="color:black">TVXQ! with Cassiopeia</a></strong>
+    <ul class="right hide-on-med-and-down">
+      <li><a href="introduction.html">簡介</a></li>
+      <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSdIEBWc81mgZ4cVjAFYz99iLJ2meilT3EPklHpGv7KbFusggQ/viewform">周邊商品</a></li>
+      <!-- Dropdown Trigger -->
+      <li><a class="dropdown-button" href="#!" data-activates="dropdown1">更多<i class="material-icons right">arrow_drop_down</i></a></li>
+    </ul>
+  </div>
+</nav> 
+<script>
+$(".dropdown-button").dropdown();
+
+
+</script>
+<!-- navbar結束 -->
+
+
+<div id="container">
+    <div class="box1">
+       <div class="collection">
+        <a href="javascript:change(0)" class="collection-item">11/11 札幌巨蛋</a>
+        <a href="javascript:change(1)" class="collection-item">11/25 東京巨蛋</a>
+        <a href="javascript:change(2)" class="collection-item">11/26 東京巨蛋</a>
+        <a href="javascript:change(3)" class="collection-item">11/27 東京巨蛋</a>
+		<a href="javascript:change(4)" class="collection-item">12/02 福岡雅虎日本巨蛋</a>
+		<a href="javascript:change(5)" class="collection-item">12/03 福岡雅虎日本巨蛋</a>
+		<a href="javascript:change(6)" class="collection-item">12/20 東京巨蛋</a>
+		<a href="javascript:change(7)" class="collection-item">12/21 東京巨蛋</a>
+		<a href="javascript:change(8)" class="collection-item">12/26 大阪京瓷巨蛋</a>
+		<a href="javascript:change(9)" class="collection-item">12/27 大阪京瓷巨蛋</a>
+		<a href="javascript:change(10)" class="collection-item">12/28 大阪京瓷巨蛋</a>
+		<a href="javascript:change(11)" class="collection-item">01/12 名古屋巨蛋</a>
+		<a href="javascript:change(12)" class="collection-item">01/13 名古屋巨蛋</a>
+		<a href="javascript:change(13)" class="collection-item">01/14 名古屋巨蛋</a>
+      </div>
+    </div>
+    <div class="box2">
+       <div id="map"></div>
+    </div>
+	<div class="box3">
+       <div id="pano"></div>
+    </div>
+    <div class="clear"></div>
+</div>
+
+
+<!-- footer開始 -->
+<footer class="page-footer  cyan darken-2">
+          <div class="container">
+            <div id="footer" class="row">
+              <div class="col l6 s12">
+                <h5><span class="grey-text text-darken-3">NCHU MIS</span></h5>
+                <span class="blue-grey-text text-darken-3">HTML5 final project</span>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <h5><span class="grey-text text-darken-3">Links</span></h5>
+                <ul>
+                  <li><a href="http://mis.nchu.edu.tw/portal/"><span class="blue-grey-text text-lighten-3">中興資管</span></a></li>
+                  <li><a href="https://asewodkckemvksa.blogspot.tw/"><span class="blue-grey-text text-lighten-3">作者blogger</span></a></li>
+				  <li><a href="http://tvxq.smtown.com/"><span class="blue-grey-text text-lighten-3">相關粉絲專頁1</span></a></li>
+				  <li><a href="http://wearetvxq.com/"><span class="blue-grey-text text-lighten-3">相關粉絲專頁2</span></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright ">
+            <div class="container"><span class="blue-grey-text text-lighten-3">
+            © 2018 Copyright Text
+            </span><span class="blue-grey-text text-lighten-3 right">ALL PASS!!!PLEASE</span>
+            </div>
+          </div>
+        </footer>
+		<!-- footer結束 -->
+		 <script>
+var map;
+var panorama;
+var marker;
+var tour = [{lat: 43.015893, lng: 141.409508},{lat:35.7057, lng: 139.75187},{lat: 35.7057, lng: 139.75187},{lat:35.7057, lng: 139.75187},
+			{lat:33.595361, lng:130.362195},{lat:33.595361, lng:130.362195},{lat:35.7057, lng: 139.75187},{lat:35.7057, lng: 139.75187},
+			{lat:34.669528, lng:135.476003},{lat:34.669528, lng:135.476003},{lat:34.669528, lng:135.476003},{lat:35.18653, lng:136.946735},
+			{lat:35.18653, lng:136.946735},{lat:35.18653, lng:136.946735}];
+ 
+	function initMap() {
+                
+  map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 15,
+    center: tour[0]
+  });
+  marker = new google.maps.Marker({
+    position: tour[0] ,
+    map: map,
+    title: 'Japan tour'
+  });
+  marker.setMap(map);
+    panorama = new google.maps.StreetViewPanorama(
+      document.getElementById('pano'), {
+        position: tour[0],
+        pov: {
+          heading: 233.73718219994544,
+          pitch: 11.996424894970275
+        }
+      });
+  map.setStreetView(panorama);
+  }
+
+  function change(x){
+
+  map.setCenter(tour[x]);
+  marker.setPosition(tour[x]);
+  marker.setMap(map);
+  panorama.setPosition(tour[x]);
+  map.setStreetView(panomara);
+}
+    
+ </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?signed_in=true&callback=initMap&key=AIzaSyC8HyXMemOPls9A9a7TS6uNFwH1hNbLPpw"></script>
+    </body>
+  </html>

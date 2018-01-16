@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	  <style>
+	nav ul li a{
+  color: black;
+  }
+	  </style>
+	  
+	  <script>
+		var list =["https://www.youtube.com/embed/2AfIQX8YUVw","https://www.youtube.com/embed/LLzujr-rgkI","https://www.youtube.com/embed/s-WwbFyD98w","https://www.youtube.com/embed/rwagNDrh1DA","https://www.youtube.com/embed/46HR67ZxwPI","https://www.youtube.com/embed/h9wTFx0Y12c","https://www.youtube.com/embed/lboOW5AmI8g","https://www.youtube.com/embed/4_ZLXmB5jM4","https://www.youtube.com/embed/YddC4aUoKaI","https://www.youtube.com/embed/78OZXQoZWIw","https://www.youtube.com/embed/CdbTR9nWtj4","https://www.youtube.com/embed/asYdAYe6m-s","https://www.youtube.com/embed/B5qzPFxyqZU"]
+		var x;
+		function changeVedio(i){
+		if(x!=null){document.getElementById("A"+x).className = "collection-item";}
+		document.getElementById("frame").src = list[i];
+		document.getElementById("A"+i).className = "collection-item active";
+		x=i;
+		
+		
+	  }
+	  
+	</script>
+	
+    </head>
+
+    <body background="https://www.123freevectors.com/wp-content/original/2087-blue-watercolor-background.jpg" style="background-repeat:no-repeat; background-size:100% 100%;" >
+      <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+	  
+	  <!-- navbar開始 --> 
+<ul id="dropdown1" class="dropdown-content">
+  <li><a href="new google map.html">追星地圖</a></li>
+	  <li class="divider"></li>
+	  <li><a href="youtube player.html">影片播放清單</a></li>
+	  <li class="divider"></li>
+	  <li><a href="fb graph api.html">最新資訊</a></li>
+</ul>
+<nav class=" transparent z-depth-0" >  
+  <div class="nav-wrapper">
+    <strong><a href="testing.html" class="brand-logo" style="color:black">TVXQ! with Cassiopeia</a></strong>
+    <ul class="right hide-on-med-and-down">
+      <li><a href="introduction.html">簡介</a></li>
+      <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSdIEBWc81mgZ4cVjAFYz99iLJ2meilT3EPklHpGv7KbFusggQ/viewform">周邊商品</a></li>
+      <!-- Dropdown Trigger -->
+      <li><a class="dropdown-button" href="#!" data-activates="dropdown1">更多<i class="material-icons right">arrow_drop_down</i></a></li>
+    </ul>
+  </div>
+</nav> 
+<script>
+$(".dropdown-button").dropdown();
+
+
+</script>
+<!-- navbar結束 -->
+  
+  <div class="row valign-wrapper" >
+    <div class="col s12 m6 offset-m3 valign">
+      
+            <div class="video-container">
+            <iframe id="frame" width="800" height="410" src="https://www.youtube.com/embed/2AfIQX8YUVw" frameborder="0" allowfullscreen></iframe>
+			</div>
+          </div>
+  </div>
+
+
+<ul class="collapsible popout" data-collapsible="accordion">
+  <li>
+    <div class="collapsible-header">
+      <i class="material-icons">music_video</i>
+      專輯
+      <span class="badge">4</span></div>
+    <div class="collapsible-body collection">
+    <a id="A0" href="javascript:changeVedio(0)" class="collection-item">Share the world</a>
+    <a id="A1" href="javascript:changeVedio(1)" class="collection-item">Stand by U</a>
+    <a id="A2" href="javascript:changeVedio(2)" class="collection-item">Bolero</a>
+    <a id="A3" href="javascript:changeVedio(3)" class="collection-item">Wrong Number</a>
+  </div>
+  </li>
+  <li>
+    <div class="collapsible-header">
+      <i class="material-icons">videocam</i>
+      演唱會
+      <span class="badge">5</span></div>
+    <div class="collapsible-body collection">
+    <a id="A4" href="javascript:changeVedio(4)" class="collection-item">為何我會喜歡上你</a>
+    <a id="A5" href="javascript:changeVedio(5)" class="collection-item">Love in the ice</a>
+    <a id="A6" href="javascript:changeVedio(6)" class="collection-item">不要忘記</a>
+	<a id="A7" href="javascript:changeVedio(7)" class="collection-item">Boy's letter</a>
+    <a id="A8" href="javascript:changeVedio(8)" class="collection-item">君のいない夜</a>
+  </div>
+  </li>
+  <li>
+    <div class="collapsible-header">
+      <i class="material-icons">sentiment_very_satisfied</i>
+      綜藝節目
+      <span class="badge">4</span></div>
+    <div class="collapsible-body collection">
+    <a id="A9" href="javascript:changeVedio(9)" class="collection-item">東方神起-人體探險隊 上</a>
+    <a id="A10" href="javascript:changeVedio(10)" class="collection-item">東方神起-人體探險隊 下</a>
+    <a id="A11" href="javascript:changeVedio(11)" class="collection-item">JYJ - 收穫旅行</a>
+    <a id="A12" href="javascript:changeVedio(12)" class="collection-item">東方神起-來玩吧</a>
+  </div>
+  </li>
+</ul>
+
+
+
+
+<!-- footer開始 -->
+<footer class="page-footer  cyan darken-2">
+          <div class="container">
+            <div id="footer" class="row">
+              <div class="col l6 s12">
+                <h5><span class="grey-text text-darken-3">NCHU MIS</span></h5>
+                <span class="blue-grey-text text-darken-3">HTML5 final project</span>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <h5><span class="grey-text text-darken-3">Links</span></h5>
+                <ul>
+                  <li><a href="http://mis.nchu.edu.tw/portal/"><span class="blue-grey-text text-lighten-3">中興資管</span></a></li>
+                  <li><a href="https://asewodkckemvksa.blogspot.tw/"><span class="blue-grey-text text-lighten-3">作者blogger</span></a></li>
+				  <li><a href="http://tvxq.smtown.com/"><span class="blue-grey-text text-lighten-3">相關粉絲專頁1</span></a></li>
+				  <li><a href="http://wearetvxq.com/"><span class="blue-grey-text text-lighten-3">相關粉絲專頁2</span></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright ">
+            <div class="container"><span class="blue-grey-text text-lighten-3">
+            © 2018 Copyright Text
+            </span><span class="blue-grey-text text-lighten-3 right">ALL PASS!!!PLEASE</span>
+            </div>
+          </div>
+        </footer>
+		<!-- footer結束 -->
+    </body>
+  </html>

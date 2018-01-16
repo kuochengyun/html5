@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<style>
+	nav ul li a{
+  color: black;
+  }
+	  </style>
+  <html>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+
+    <body background="https://www.123freevectors.com/wp-content/original/2087-blue-watercolor-background.jpg" style="background-repeat:no-repeat; background-size:100% 100%;" >
+      <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+	  <!-- navbar開始 --> 
+<ul id="dropdown1" class="dropdown-content">
+  <li><a href="new google map.html">追星地圖</a></li>
+	  <li class="divider"></li>
+	  <li><a href="youtube player.html">影片播放清單</a></li>
+	  <li class="divider"></li>
+	  <li><a href="fb graph api.html">最新資訊</a></li>
+</ul>
+<nav class=" transparent z-depth-0" >  
+  <div class="nav-wrapper">
+    <strong><a href="testing.html" class="brand-logo" style="color:black">TVXQ! with Cassiopeia</a></strong>
+    <ul class="right hide-on-med-and-down">
+      <li><a href="introduction.html">簡介</a></li>
+      <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSdIEBWc81mgZ4cVjAFYz99iLJ2meilT3EPklHpGv7KbFusggQ/viewform">周邊商品</a></li>
+      <!-- Dropdown Trigger -->
+      <li><a class="dropdown-button" href="#!" data-activates="dropdown1">更多<i class="material-icons right">arrow_drop_down</i></a></li>
+    </ul>
+  </div>
+</nav> 
+<script>
+	
+	$(".dropdown-button").dropdown();
+	window.onload = function(){
+	getData();}
+	function getData(){
+		var xmlhttp = new XMLHttpRequest();
+		var url = 'https://graph.facebook.com/tvxq/posts?access_token=142034716459696|f6c5a8ea1a0c1899c5a095fafaa4d8e2&fields=created_time,link,message,full_picture&limit=20';
+
+		xmlhttp.onreadystatechange = function() {
+		if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+			var myArr = JSON.parse(xmlhttp.responseText);
+			myFunction(myArr);
+			}
+		}
+		
+		xmlhttp.open("GET", url, true);
+		xmlhttp.send();
+		
+		function myFunction(arr){
+			var data = arr.data;
+			var text = "";
+			var i;
+			for(i=0;i<data.length;i++){
+				if(data[i].message!=null){
+				var url = data[i].link;
+				text+='<li class="collection-item avatar">'+
+					'<img src="'+data[i].full_picture+'" alt="" class="circle">'+
+					'<a href="'+url+'"><p style="width:60%;color:black;font-weight:bold;height:3rem;overflow:hidden;">'+data[i].message+'</p></a><br>'+
+					'<p style="font-size:12px;color:grey;">'+data[i].created_time+'</p>'+
+					'<a href="'+url+'" class="secondary-content"><i class="material-icons">grade</i></a>'+
+					'</li>';
+					}
+				}
+			$('#datainput').append(text);
+		}
+	}
+
+
+
+</script>
+<!-- navbar結束 -->
+
+
+	<ul id="datainput" class="collection">
+	
+	</ul>
+
+
+
+
+<!-- footer開始 -->
+<footer class="page-footer  cyan darken-2">
+          <div class="container">
+            <div id="footer" class="row">
+              <div class="col l6 s12">
+                <h5><span class="grey-text text-darken-3">NCHU MIS</span></h5>
+                <span class="blue-grey-text text-darken-3">HTML5 final project</span>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <h5><span class="grey-text text-darken-3">Links</span></h5>
+                <ul>
+                  <li><a href="http://mis.nchu.edu.tw/portal/"><span class="blue-grey-text text-lighten-3">中興資管</span></a></li>
+                  <li><a href="https://asewodkckemvksa.blogspot.tw/"><span class="blue-grey-text text-lighten-3">作者blogger</span></a></li>
+				  <li><a href="http://tvxq.smtown.com/"><span class="blue-grey-text text-lighten-3">相關粉絲專頁1</span></a></li>
+				  <li><a href="http://wearetvxq.com/"><span class="blue-grey-text text-lighten-3">相關粉絲專頁2</span></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright ">
+            <div class="container"><span class="blue-grey-text text-lighten-3">
+            © 2018 Copyright Text
+            </span><span class="blue-grey-text text-lighten-3 right">ALL PASS!!!PLEASE</span>
+            </div>
+          </div>
+        </footer>
+		<!-- footer結束 -->
+    </body>
+  </html>
